@@ -32,7 +32,7 @@ import express from "express";
     ]);
     res.status(200).redirect("/");
   });
-  app.listen("9090", () =>
+  app.listen(process.env.PORT, () =>
     console.log("lightswitch-home-manager running on 9090")
   );
 })(); // IIFE
