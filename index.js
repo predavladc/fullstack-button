@@ -24,7 +24,8 @@ import express from "express";
         } ">light is ${doc.powered ? "on" : "off"}
         <form action="/switch" method="post">
             <button type="submit">turn ${doc.powered ? "off" : "on"}</button>
-            </form><p>This is a fullstack app in under 40 LoC <a href="https://github.com/predavladc/portfolio">Portfolio</a></p></div></body>`);
+            </form>
+            <p>This is a fullstack app in under 40 LoC <a href="https://predavladc.github.io/portfolio/">Portfolio</a> <a href="https://github.com/predavladc/fullstack-button">Source Code</a></p></div></body>`);
   });
   app.post("/switch", async (req, res) => {
     await LightSwitch.updateOne({ _id: lightSwitchID }, [
